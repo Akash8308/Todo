@@ -1,14 +1,14 @@
-# Use a Java runtime as base
-FROM openjdk:17.0.8-jdk-slim
+# Use Eclipse Temurin Java 17
+FROM eclipse-temurin:17-jdk-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy the built jar
+# Copy the jar file
 COPY target/todo-app-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the port your app runs on
+# Expose port
 EXPOSE 8080
 
-# Command to run the jar
+# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
