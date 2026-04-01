@@ -14,7 +14,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy jar from build stage
-COPY --from=build /app/target/todo-app-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/taskmanager-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port
 EXPOSE 8080
